@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTouchingLetterChanged(String s) {
                 int position = adapter.getPositionForSection(s.charAt(0));
                 if (position != -1) {
-                    sortListView.setSelection(position);
+                    sortListView.setSelection(position + 1);
                 }
 
             }
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 Toast.makeText(getApplication(),
-                        ((CitySortModel) adapter.getItem(position)).getName(),
+                        ((CitySortModel) adapter.getItem(position - 1)).getName(),
                         Toast.LENGTH_SHORT).show();
             }
         });

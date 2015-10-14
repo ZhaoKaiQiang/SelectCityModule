@@ -75,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
         SourceDateList = filledData(getResources().getStringArray(R.array.provinces));
         Collections.sort(SourceDateList, new PinyinComparator());
         adapter = new SortAdapter(this, SourceDateList);
-        sortListView.setAdapter(adapter);
         sortListView.addHeaderView(initHeadView());
+        sortListView.setAdapter(adapter);
     }
 
 
